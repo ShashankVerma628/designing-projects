@@ -1,0 +1,28 @@
+
+
+// set text color according to the background
+
+@function set-text-color($color){
+    @if(lightness($color)>60){
+        @return #333;
+    }@else{
+        @return #fff;
+    }
+}
+
+// set background color 
+
+
+@mixin set-background($color){
+    background: $color;
+    color: set-text-color($color);
+}
+
+// flexbox
+
+@mixin flexbox($direction){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}

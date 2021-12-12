@@ -1,0 +1,215 @@
+.footer {
+    background: $secondary-dark;
+    border-top: 2px solid $primary;
+    .container {
+        @include flexbox(column);
+
+        @media (min-width: 1201px) {
+            @include flexbox(row);
+            gap: 1em;
+        }
+        gap: 1em;
+    }
+
+    padding: 1em;
+    .primary-color {
+        color: $primary;
+        font-size: 40px;
+        text-transform: uppercase;
+        font-family: "Mouse Memoirs", sans-serif;
+    }
+
+    .trove-address {
+        h3{
+            text-transform: uppercase;
+            font-size: 2.2rem !important;
+            letter-spacing: 0.44px;
+            font-weight: lighter;
+        }
+        address {
+            font-size: 1.6rem !important;
+            width: 80%;
+        }
+        position: relative;
+        .ellipse {
+            position: absolute;
+            clip-path: ellipse(55% 49% at 50% 99%);
+            top: -130px;
+            height: 150px;
+            width: 100%;
+            background-color: $secondary;
+            z-index: 1;
+        }
+        @include flexbox(column);
+        padding-top: 0;
+        gap: 2em;
+        text-align: center;
+        background: $secondary;
+        color: $white;
+        transform: translateY(-15px);
+        @media (min-width: 800px) {
+            transform: translateY(1px);
+        }
+        #main-logo {
+            position: relative;
+            z-index: 999;
+            path {
+                fill: $white;
+            }
+            #Path_1013 {
+                fill: $primary;
+            }
+            &:hover {
+                path {
+                    fill: $primary;
+                }
+                #Path_1013 {
+                    fill: $white;
+                }
+            }
+        }
+        #primary-color {
+            color: $primary;
+            font-size: 1.6rem;
+
+            &::before,
+            &::after {
+                margin: 0 0.5em;
+                content: "\2022";
+            }
+        }
+        a,
+        i {
+            color: $white;
+        }
+        a:hover,
+        i:hover {
+            color: $primary;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            border: 2px solid transparent;
+            &:hover {
+                border-radius: 0;
+            }
+        }
+        .social-container a {
+            display: inline-block;
+            padding: 1em 0.3em;
+        }
+    }
+
+    .footer-b {
+        @media(max-width: 800px){
+            text-align: center;
+        }
+        color: $white;
+        @include flexbox(column);
+        justify-content: space-between;
+        gap: 2em;
+        text-align: unset;
+
+        .primary-color {
+            font-size: 2.8rem !important;
+            letter-spacing: 0.56px !important;
+            font-weight: lighter !important;
+            margin-bottom: 30px;
+        }
+
+        .footer-list-container {
+            padding: 2em 0;
+            @include flexbox(column);
+            gap: 2em;
+            @media (min-width: 800px) {
+                @include flexbox(row);
+                align-items: flex-start;
+                .footer-list {
+                    width: 30%;
+                }
+                .subscribe {
+                    width: 30%;
+                }
+            }
+            li{
+                margin-bottom: 20px;
+            }
+            li a {
+                font-size: 16px;
+                color: $white;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                font-weight: lighter !important;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+
+            .footer-list {
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+            }
+
+            .subscribe {
+                p {
+                    font-size: 1.6rem !important;
+                }
+                &-form {
+                    position: relative;
+                    input {
+                        width: 100%;
+                        margin: auto;
+                        height: 40px;
+                        border: 3px solid $neutral-light;
+                        text-transform: uppercase;
+                        outline: none;
+                        transition: all 0.3s ease-in;
+
+                        &:focus {
+                            border: 3px solid $primary;
+                            box-shadow: 5px 5px 5px $primary-light;
+                        }
+                    }
+                    button {
+                        position: absolute;
+                        height: 40px;
+                        right: 5px;
+                        top: 0;
+                        background: transparent;
+                        border: none;
+                        padding: 0.5em 1em;
+                        cursor: pointer;
+                        color: $secondary;
+                    }
+                }
+            }
+        }
+        .footer-c {
+            border-top: 2px dashed $white;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            align-content: center;
+            p {
+                margin-top: 1rem;
+                display: flex;
+                align-items: center;
+                column-gap: 0.3em;
+                font-size: 15px;
+                
+                a {
+                    border-left: 2px solid $primary;
+                    color: $white;
+                    padding: 0 0.5rem;
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}

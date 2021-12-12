@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --primary-color: rgb(253, 61, 61);
+}
+
+img {
+    width: 100%;
+}
+
+.btn {
+    background: var(--primary-color);
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* wrapper */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* wrapper ends */
+
+.left {
+    background: #000;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5%;
+}
+
+.left img {
+    margin-bottom: 2em;
+}
+
+.left .login-form {
+    width: 100%;
+}
+
+label, input {
+    width: 100%;
+}
+
+input {
+    border: none;
+    border-radius: 2px;
+    padding: 0.4em 1em;
+    margin: 1em 0;
+}
+
+/* signup-section */
+
+.signup-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3em;
+}
+
+.signup-section p a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.signup-section p a:hover {
+    color: var(--primary-color);
+}
+
+/* signUp btn */
+
+.sign-up-btn {
+    cursor: pointer;
+    border: 1px solid #fff;
+    padding: 0.2em 1em;
+    font-size: 1.2rem;
+    color: #fff;
+    background: transparent;
+    transition: all 0.3s linear;
+}
+
+.sign-up-btn:hover {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* signUp btn ends */
+
+/* footer */
+
+footer {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-bottom: 5%;
+}
+
+footer a {
+    color: var(--primary-color);
+}
+
+/* footer ends */
+
+/* left ends */
+
+/* right */
+
+.right {
+    background: url("../img/login-bg.jpg") no-repeat center center / cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    gap: 1em;
+    text-align: center;
+}
+
+.right h2 {
+    font-size: 1.6rem;
+}
+
+.right button {
+    background: transparent;
+    color: #fff;
+    font-size: 1.2rem;
+    border: 1px solid #fff;
+    padding: 0.2em 1em;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+.right button:hover {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* right ends */
+
+/* Media Queries */
+
+@media(min-width: 600px) {
+    .wrapper {
+        flex-direction: row;
+    }
+    .left {
+        flex: 1;
+    }
+    .right {
+        flex: 1;
+    }
+}
+
+@media(min-width: 800px) {
+    .left {
+        flex: 1;
+    }
+    .right {
+        flex: 2;
+    }
+}

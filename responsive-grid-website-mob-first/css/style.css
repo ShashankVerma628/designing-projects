@@ -1,0 +1,289 @@
+/* google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #ddd;
+    --dark: #333;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+/* global */
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+ul {
+    list-style-type: none;
+}
+
+.wrapper {
+    font-family: 'Lato', sans-serif;
+    background: #ccc;
+    padding: 1em;
+}
+
+.btn {
+    background: var(--dark);
+    padding: 0.5em;
+    color: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* header */
+
+header {
+    margin-bottom: 1em;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5em;
+    place-items: center;
+}
+
+.navbar li {
+    background: var(--light);
+    padding: 1em;
+    width: 100%;
+    text-align: center;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+
+.navbar li:hover {
+    background: var(--dark);
+    color: #fff;
+}
+
+.navbar li a {
+    text-transform: uppercase;
+}
+
+/* header ends */
+
+/* top-container */
+
+.top-container {
+    display: grid;
+    gap: 1em;
+    grid-template-areas: 'hero-banner hero-banner hero-banner hero-banner' 'membership membership membership membership' 'pro-membership pro-membership pro-membership pro-membership';
+    margin-bottom: 1em;
+}
+
+/* top-container ends */
+
+/* hero-banner */
+
+.top-container .hero-banner {
+    background: url("../img/showcase.jpg") no-repeat center center / cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4%;
+    height: 70vh;
+    grid-area: hero-banner;
+}
+
+.hero-banner .hero-banner-content {
+    line-height: 1.6;
+}
+
+.hero-banner h1 {
+    font-size: 2.5rem;
+}
+
+/* hero-banner-ends */
+
+/* side-container-a & side-container-b */
+
+.side-container-a, .side-container-b {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    background: var(--light);
+    width: 100%;
+    box-shadow: var(--shadow);
+}
+
+.side-container-a h2, .side-container-b h2 {
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+.top-container .side-container-a {
+    grid-area: membership;
+}
+
+.top-container .side-container-b {
+    grid-area: pro-membership;
+}
+
+/* side-container-a & side-container-b ends */
+
+/* top-container ends */
+
+/* info-container */
+
+.info-container {
+    margin-bottom: 1em;
+}
+
+.info-container .info {
+    display: grid;
+    grid-template-areas: "analytics analytics analytics analytics" "marketing marketing marketing marketing" "development development development development" "support support support support";
+    gap: 1em;
+}
+
+.info-container .info li {
+    background: var(--light);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: var(--shadow);
+    gap: 1em;
+}
+
+#development {
+    grid-area: development;
+}
+
+#marketing {
+    grid-area: marketing;
+}
+
+#analytics {
+    grid-area: analytics;
+}
+
+#support {
+    grid-area: support;
+}
+
+/* info-container ends */
+
+/* web-article */
+
+.web-article {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    background: var(--light);
+    box-shadow: var(--shadow);
+    margin-bottom: 1em;
+}
+
+.web-article>div {
+    padding: 1em;
+}
+
+.web-article .article-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.web-article .article-content a{
+    align-self: flex-start;
+}
+/* web-article ends */
+
+/* gallery */
+
+
+.gallery{
+    display: grid;
+    gap: 0.5em;
+    grid-template-columns: repeat(auto-fit,minmax(200px ,1fr));
+    margin-bottom: 1em;
+}
+
+.gallery img{
+    width: 100%;
+    box-shadow: var(--shadow);
+    transition : transform 0.2s ease-in;
+    cursor: pointer;
+}
+
+.gallery img:hover{
+    transform: scale(0.9);
+}
+
+/* gallery ends*/
+
+/* footer */
+
+.footer{
+    background:var(--dark);
+    color: #fff;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+}
+
+/* footer ends */
+
+/* media queries */
+
+/* for tablets */
+
+@media(min-width: 500px) {
+    .navbar {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .top-container {
+        grid-template-areas: 'hero-banner hero-banner hero-banner hero-banner' 'membership membership pro-membership pro-membership';
+    }
+    .info-container .info {
+        display: grid;
+        grid-template-areas: "analytics analytics marketing marketing" "development development support support";
+    }
+}
+
+/* for desktop */
+
+@media(min-width: 700px) {
+    .top-container {
+        grid-template-areas: 'hero-banner hero-banner hero-banner membership' 'hero-banner hero-banner hero-banner pro-membership';
+    }
+    .info-container .info {
+        grid-template-areas: "analytics marketing development support";
+    }
+    .web-article{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .web-article .article-content{
+        justify-content: center;
+    }
+    .web-article .article-content h1{
+        font-size: 2rem;
+    }
+    .web-article .article-content p{
+        font-size: 1.5rem;
+    }
+    .web-article .article-content a{
+        font-size: 1.2rem;
+    }
+}

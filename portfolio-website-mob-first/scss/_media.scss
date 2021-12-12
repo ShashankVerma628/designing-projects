@@ -1,0 +1,22 @@
+// Media Queries
+
+@media (min-width: 850px) {
+    .container{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .template .template-body {
+        @include flexbox(row);
+    }
+    .about-container{
+        @include flexbox(row);
+        gap: 2em;
+
+        .about{
+            flex-basis: 60%;
+        }
+        .banner{
+            flex-basis: 40%;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+// Media Queries
+
+
+@media(min-width: 690px){
+    .product{
+        text-align: left;
+        margin-bottom: 8em;
+        img{
+            float: right;
+            width: 60%;
+            shape-margin: 2em;
+        }
+    }
+
+    .shoe-red img{
+        shape-outside: url(../img/shoe-4.png);
+    }
+
+    .shoe-blue img{
+        shape-outside: url(../img/shoe-5.png);
+    }
+    .shoe-left img{
+        float: left;
+    }
+    .shoe-white img{
+        shape-outside: url(../img/shoe-6.png);
+    }
+}

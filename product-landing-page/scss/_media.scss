@@ -1,0 +1,9 @@
+// Media Queries
+
+
+@media(min-width: 800px){
+    .hero-banner{
+        @include flexbox(row);
+        gap: 2em;
+    }
+}

@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #fff;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+}
+
+ul{
+    list-style-type: none;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+h1,h2,h3{
+    text-transform: uppercase;
+    color: #17353d;
+}
+
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+}

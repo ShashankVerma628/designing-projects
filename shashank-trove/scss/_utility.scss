@@ -1,0 +1,121 @@
+// margin & padding
+$spaceamounts: (1, 2, 3, 4, 5);
+
+// utility classes for margin and padding
+@each $space in $spaceamounts {
+    // margins
+    .my-#{$space} {
+        margin: #{$space}em 0;
+    }
+    .m-#{$space} {
+        margin: #{$space}em;
+    }
+    .mx-#{$space} {
+        margin: 0 #{$space}em;
+    }
+
+    // paddings
+    .py-#{$space} {
+        padding: #{$space}em 0;
+    }
+    .p-#{$space} {
+        padding: #{$space}em;
+    }
+    .px-#{$space} {
+        padding: 0 #{$space}em;
+    }
+}
+
+// container
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+
+    @media (max-width: 700px) {
+        width: 100%;
+    }
+}
+
+// mixin for button animation
+
+@mixin button-animation($color, $name) {
+    @keyframes auto-animate-#{$name} {
+        0% {
+            border-top: 2px dashed $color;
+        }
+        25% {
+            border-top: 2px dashed $color;
+            border-right: 2px dashed $color;
+        }
+        50% {
+            border-top: 2px dashed $color;
+            border-right: 2px dashed $color;
+            border-bottom: 2px dashed $color;
+        }
+        100% {
+            border-top: 2px dashed $color;
+            border-right: 2px dashed $color;
+            border-bottom: 2px dashed $color;
+            border-left: 2px dashed $color;
+        }
+    }
+}
+
+// .btn styles
+.btn {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    transition: all 0.3s ease-out;
+    letter-spacing: 0.6px;
+    padding: 2rem 4rem 1.8rem 4rem !important;
+    color: $white;
+    text-transform: uppercase;
+    border : 2px solid transparent;
+
+    // primary-btn styles and applying animation
+    &.btn-primary {
+        background: $primary;
+        &:hover,
+        &:focus {
+            border-radius: 35%;
+            color: $primary;
+            background: $white;
+            animation-name: auto-animate-primary;
+            animation-duration: 0.1s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+        }
+    }
+    &.btn-secondary {
+        background: $secondary;
+        &:hover,
+        &:focus {
+            border-radius: 35%;
+            animation-name: auto-animate-secondary;
+            animation-duration: 0.1s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+            color: $secondary;
+            background: $white;
+        }
+    }
+    @include button-animation($primary, primary);
+    @include button-animation($secondary, secondary);
+}
+
+// mixin for button ends
+
+.event-link {
+    font-family: "Mouse Memoirs", sans-serif;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 30px;
+    border-bottom: 2px solid transparent;
+    &:hover,
+    &:focus {
+        border-bottom: 2px solid $white;
+    }
+}

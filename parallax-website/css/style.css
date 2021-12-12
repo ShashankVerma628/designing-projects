@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.dark{
+    background: rgba(0,0,0,0.8);
+}
+
+.section-light{
+    color: #666;
+    background: rgb(226, 226, 226);
+}
+
+.section-dark{
+    background: rgba(0,0,0);
+    color: #fff;
+}
+
+.img h1,
+.img h2,
+.img h3{
+    font-size: 2rem;
+    padding: 0.2em 1em;
+    text-transform: uppercase;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 4%;
+}
+
+.section h2{
+    font-size : 1.5rem;
+}
+
+.img{
+    position: relative;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-1{
+    background: url('../img/city2.jpg')  no-repeat center center / cover;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.img-2{
+    background: url('../img/city1.jpg')  no-repeat center center / cover;
+    height: 50vh;
+    background-attachment: fixed;
+}
+
+.img-2 h2,
+.img-3 h2{
+    color: #000;
+    background: rgba(185, 184, 184,0.8);
+}
+
+.img-3{
+    background: url("../img/city2.jpg")  no-repeat center center / cover;
+    height: 50vh;
+    background-attachment: fixed;
+}

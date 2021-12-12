@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Robot', sans-serif;
+}
+ul{
+    list-style-type: none;
+}
+img {
+    width: 100%;
+}
+
+main {
+    position: relative;
+}
+
+.image {
+    width: 100%;
+    height: 70vh;
+    background: url("../img/showcase.jpg") no-repeat center center / cover;
+    filter: blur(10px);
+    transition: all 0.4s linear;
+}
+
+header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s linear;
+}
+header img{
+    max-width: 400px;
+    height: auto;
+}
+header h1{
+    font-size: 1.5rem;
+}
+header p{
+    display: none;
+}
+
+.image:hover {
+    filter: blur(0);
+}
+
+.image:hover+header {
+    filter: blur(2px);
+}
+
+/* main ends */
+
+/* section-services */
+
+.services{
+    display: grid;
+    grid-template-columns: 1fr;
+    background: #000;
+    color: #fff;
+}
+
+.services li{
+    border-bottom: 1px dotted #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 2%;
+    text-align: center;
+}
+.services li h2{
+    font-size: 1.4rem;
+}
+
+/* services ends */
+/* about section */
+
+.about{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+}
+.about .laptop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    padding: 4%;
+}
+
+.about .about-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 3%;
+}
+.about .about-content h3{
+    font-size: 1.5rem;
+
+}
+/* about section ends */
+/* footer */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 10vh;
+    background: #000;
+    color: #fff;
+}
+
+footer p{
+    font-size: 1.5rem;
+}
+
+/* footer ends */
+/* Media Queries */
+
+
+@media(min-width: 700px){
+    .image{
+        height: 100vh;
+    }
+    header p{
+        display: block;
+    }
+    .services {
+        grid-template-columns: repeat(3,1fr);
+        padding: 5%;
+        gap: 2em;
+    }
+    .services li{
+        border: none;
+    }
+    .services li h2{
+        font-size: 2rem;
+    }
+    .about{
+        grid-template-columns: 1fr 2fr;
+    }
+    .about .about-content h3{
+        font-size: 2rem;
+    }
+    .about .about-content p{
+        font-size: 1.3rem;
+    }
+    footer p{
+        font-size: 2rem;
+    }
+}

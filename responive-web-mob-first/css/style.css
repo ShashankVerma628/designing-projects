@@ -1,0 +1,259 @@
+/* google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+/* Global */
+
+:root {
+    --font: 'Roboto', sans-serif;
+    --primary-color: #e8491d;
+    --background: #f4f4f4;
+    --secondary-color: #ff6940;
+    --primary-bg: #35424a;
+    --heading: 1.2rem;
+    --secondary-bg: #d3d3d3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.current {
+    color: var(--primary-color);
+}
+
+.btn {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    /* font-size: 1.2rem; */
+}
+
+.bg-dark {
+    background: var(--primary-bg);
+    color: #fff;
+}
+
+/* header */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    background: var(--primary-bg);
+    border-bottom: 5px solid var(--primary-color);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .brand {
+    color: var(--primary-color);
+}
+
+.header .navbar {
+    list-style-type: none;
+    display: flex;
+    gap: 1em;
+}
+
+/* hero-banner */
+
+.hero-banner {
+    background: url('../img/bg.jpg') no-repeat center center / cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50vh;
+    padding: 0 1%;
+}
+
+.hero-banner h2 {
+    font-size: 2rem;
+}
+
+.hero-banner p {
+    display: none;
+}
+
+/* newsletter */
+
+.newsletter {
+    background: var(--primary-bg);
+    color: #fff;
+    padding: 1em 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.newsletter input {
+    padding: 0.5em;
+    width: 100%;
+    margin: 0.5em;
+}
+
+/*main - cards */
+
+main .cards {
+    list-style-type: none;
+    text-align: center;
+}
+
+/* about.html*/
+
+.page-heading {
+    margin: 1em 2%;
+}
+
+main {
+    padding: 0em 1% 0.5em 1%;
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+}
+
+main .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+main .content .content-display {
+    padding: 1em;
+}
+
+main aside {
+    padding: 1em;
+}
+
+main aside h3 {
+    font-size: 1.5rem;
+}
+
+/* services */
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+main .services {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 0 1%;
+}
+
+main .services .pricing-content {
+    background: var(--secondary-bg);
+    padding: 1em;
+}
+
+main .services .pricing-content p {
+    font-weight: lighter;
+}
+
+main .services .pricing-content .prices {
+    font-weight: bold;
+}
+
+aside {
+    background: var(--primary-bg);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+aside .form{
+    display: flex;
+    flex-direction: column;
+}
+
+aside .quote-form input,
+aside .quote-form label,
+aside .quote-form textarea{
+    width: 100%;
+    margin: 0.2em 0;
+}
+
+aside .quote-form input{
+    padding:  0.4em 1em;
+}
+
+/* footer */
+
+.footer {
+    color: #fff;
+    background: var(--secondary-color);
+    text-align: center;
+    padding: 1em;
+    /* font-size: 1.2rem; */
+}
+
+/* Media Queries */
+
+@media(min-width: 620px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.1em 1%;
+    }
+    .hero-banner h2 {
+        font-size: 2.2rem;
+    }
+    .hero-banner p {
+        display: block;
+    }
+    .newsletter {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .newsletter form {
+        display: flex;
+    }
+    .newsletter input[type='email'] {
+        width: 70%;
+    }
+    .newsletter input[type="submit"] {
+        width: 30%;
+    }
+    main .cards {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        padding: 0.2em 1%;
+    }
+    /* about us */
+    main {
+        flex-direction: row;
+        width: 100%;
+        padding: 0 3% 0.5em 3%;
+    }
+    main .content {
+        width: 69%;
+    }
+    aside {
+        width: 30%;
+    }
+}

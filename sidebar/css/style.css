@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+:root {
+    --primary: rgb(47, 47, 255);
+    --secondary: rgb(228, 248, 255);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background: #cfcfcf;
+}
+
+.header {
+    padding: 1em;
+    background: #fff;
+}
+
+.shadow {
+    box-shadow: 2px 2px 2px var(--primary);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+.hamburger-container {
+    width: 60px;
+    height: 60px;
+    padding: 0.5em;
+    border: 1px solid var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    position: absolute;
+    top: 2%;
+    right: 5%;
+}
+
+.hamburger-container:hover {
+    transform: rotate(90deg);
+}
+
+.hamburger-container>div {
+    width: 100%;
+    height: 8px;
+    background: var(--primary);
+    position: relative;
+}
+
+.hamburger-container>div::after,
+.hamburger-container>div::before {
+    content: "";
+    width: 100%;
+    height: 8px;
+    background: var(--primary);
+    position: absolute;
+    top: 15px;
+}
+
+.hamburger-container>div::before {
+    top: -15px;
+}
+
+.header {
+    text-align: center;
+    width: 60%;
+    max-width: 400px;
+    position: relative;
+    height: 100vh;
+    transform: translate(-100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.brand {
+    margin-bottom: 1em;
+}
+
+#cross {
+    color: red;
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    cursor: pointer;
+    transition: transform 0.2s ease-in;
+}
+
+#cross:hover{
+    transform: scale(1.4);
+}
+
+.navbar-container {
+    width: 100%;
+}
+
+.navbar-container .navbar {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-container .navbar li {
+    width: 100%;
+    display: block;
+    padding: 0.5em 0;
+}
+
+.navbar-container .navbar li a{
+    font-size: 1.2rem;
+}
+
+.navbar-container .navbar li:hover {
+    background: var(--secondary);
+}
+
+.header.active{
+    transform: translate(0);
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/simple-lightbox.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Phono | Product landing page</title>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="p-1 container">
+        <h1 class="brand">Phono</h1>
+
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- header ends -->
+    <!-- hero-banner -->
+    <section class="hero-banner container">
+        <div class="banner-container">
+            <img src="img/showcase.jpg" alt="phono-headphone" width="438" height="585" />
+        </div>
+        <div class="content p-1">
+            <h2 class="txt-lg">The headphones of the future.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis tenetur ut doloremque sunt laudantium
+                earum, optio distinctio, doloribe!</p>
+            <a href="#" class="btn my-1">Read More</a>
+        </div>
+    </section>
+    <!-- hero-banner ends -->
+    <!-- music section -->
+    <section class="music">
+        <div class="container music-content p-1 my-1">
+            <h2>People Aren't Hearing All the Music</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, repellat? Neque odio libero
+                adipisci ipsum distinctio animi quia, labore eveniet, maxime cumque commodi, consequatur dolorem.</p>
+        </div>
+        <div class="music-overlay"></div>
+    </section>
+    <!-- music section ends -->
+
+    <!-- gallery -->
+
+    <section class="gallery-section">
+        <div class="gallery">
+            <a href="img/gal2323.jpg" class="big">
+                <img src="img/gal2323.jpg" alt="man-with-headphone" width="700" height="700" />
+            </a>
+            <a href="img/gal39834.jpg">
+                <img src="img/gal39834.jpg" alt="only-headphone" width="1000" height="500" />
+            </a>
+            <a href="img/gal43884.jpg">
+                <img src="img/gal43884.jpg" width="500" height="500" alt="headphone" />
+            </a>
+            <a href="img/gal4545.jpg">
+                <img src="img/gal4545.jpg" alt="white-headohne" width="700" height="700" />
+            </a>
+            <a href="img/gal39834.jpg">
+                <img src="img/gal39834.jpg" alt="boy-with-headphone" width="700" height="700" />
+            </a>
+        </div>
+    </section>
+
+    <!-- gallery section ends-->
+
+    <!-- footer section -->
+
+    <footer class="footer">
+        <div class="container">
+            <h1>Lorem ipsum dolor sit.</h1>
+            <div class="newsletter">
+                <h2>Subscribe</h2>
+                <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id, quaerat?</p>
+                <form class="newsletter-form">
+                    <input type="text" class="newsletter-form-input-field my-1 p-1" placeholder="Email" />
+                    <button class="newsletter-form-submit-button"><i class="fas fa-chevron-right"></i></button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <!-- footer ends -->
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <!-- simple-lightbox -->
+    <script src="js/simple-lightbox.min.js"></script>
+    <!-- font awesome kit -->
+    <script src="https://kit.fontawesome.com/280a86b751.js" crossorigin="anonymous"></script>
+
+    <script>
+        $(function () {
+            const $gallery = $('.gallery a').simpleLightbox();
+        })
+    </script>
+</body>
+
+</html>

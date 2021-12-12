@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.btn {
+    font-family: 'Mouse Memoirs', sans-serif;
+    letter-spacing: 0.4rem;
+}
+h1{
+    font-size: 46px;
+    @media(min-width: 1200px){
+        font-size: 4.5rem;
+    }
+}
+
+h2{
+    font-size: 4.6rem;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+p{
+    font-size: 1.6rem;
+}

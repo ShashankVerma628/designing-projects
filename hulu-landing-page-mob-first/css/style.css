@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background: #000;
+    color: #fff;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* global */
+
+:root {
+    --primary-color: #00ed82;
+    --primary-bg: #000;
+    --hover: rgb(196, 196, 196);
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.dark {
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.link-border {
+    color: #fff;
+    border-bottom: 1px dotted #fff;
+}
+
+.btn {
+    border: none;
+    padding: 0.5em;
+    color: #fff;
+    background: transparent;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+button {
+    cursor: pointer;
+}
+
+.list-heading {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(53, 53, 53);
+}
+
+/* header */
+
+header {
+    /* background: url("../img/header.jpg") no-repeat center center / cover; */
+    background-blend-mode: multiply;
+    background: url("../img/header.jpg") no-repeat center center / cover, radial-gradient(#444, #333);
+    background-attachment: fixed;
+    width: 100%;
+    height: 70vh;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1% 2%;
+}
+
+header .header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0.5em;
+    padding: 0 2%;
+}
+
+header .header-content .trial-btn {
+    font-size: 1.4rem;
+    padding: 0.3em 1em;
+    text-transform: uppercase;
+    border: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+
+header .header-content .trial-btn:hover {
+    background: var(--hover);
+}
+
+header .header-content .trial-btn:active {
+    transform: scale(0.9);
+}
+
+header .header-content .dark {
+    text-transform: uppercase;
+    word-spacing: .2rem;
+}
+
+/* header ends */
+
+/* modal */
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    opacity: 0;
+}
+
+.modal {
+    border: 1px solid #000;
+    background: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+/* cross btn */
+
+.cross {
+    width: 40px;
+    height: 40px;
+    padding: 0.5em;
+    align-self: flex-end;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10%;
+    /* transform: translateY(-100%); */
+}
+
+.cross>div {
+    width: 100%;
+    background: #fff;
+    position: relative;
+}
+
+.cross>div::before, .cross>div::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: #000;
+    position: absolute;
+    top: 0px;
+}
+
+.cross>div::before {
+    transform: rotate(45deg);
+}
+
+.cross>div::after {
+    transform: rotate(-45deg);
+}
+
+.modal .form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    width: 80%;
+}
+
+.modal .form input {
+    padding: 0.3em;
+}
+
+.modal #login-btn {
+    margin-top: 15px;
+    padding: 0.5em;
+    width: 55%;
+    border: none;
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.modal a {
+    color: blue;
+}
+
+/* closing a modal */
+
+.show {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* modal ends */
+
+.subs {
+    /* display: flex; */
+    background: linear-gradient( 318.68deg, #0f495c 0%, #0d3640 49.72%, #08141f 100%);
+    padding: 0 5vw;
+    /* text-align: center; */
+}
+
+.subs img {
+    max-width: 400px;
+}
+
+.subs ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 1em;
+}
+
+.subs ul li h2 {
+    font-size: 2rem;
+}
+
+.subs ul .details {
+    text-align: center;
+}
+
+.subs ul .bundle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.subs ul .bundle-container .bundle {
+    padding: 1em;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: all 0.2s ease-in;
+}
+
+.subs ul .bundle-container .bundle:hover {
+    transform: scale(1.1);
+}
+
+/* cards container */
+
+.cards-container {
+    padding: 4%;
+}
+
+.cards-container .card-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.cards-container .card-heading h1 {
+    font-size: 2.5rem;
+}
+
+.cards-container .card-heading h3 {
+    font-weight: lighter;
+}
+
+/* cards */
+
+.cards {
+    padding: 3%;
+}
+
+.cards ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* gap: 1em; */
+    place-items: center;
+}
+
+.card {
+    width: 90%;
+    height: 500px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.cards .card>div {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background: linear-gradient( 156.82deg, rgba(0, 0, 0, 0.6) 4.58%, rgba(0, 0, 0, 0) 69.61%), linear-gradient(24.5deg, rgba(0, 0, 0, 0.2) 4.71%, rgba(0, 0, 0, 0) 71.49%);
+}
+
+#chef {
+    background: url("../img/cover-1.jpg") no-repeat center center / cover;
+}
+
+#mic {
+    background: url("../img/cover-2.jpg") no-repeat center center / cover;
+}
+
+#cartoon {
+    background: url("../img/cover-3.jpg") no-repeat center center / cover;
+}
+
+#premium {
+    background: url("../img/cover-4.jpg") no-repeat center center / cover;
+}
+
+/* cards section ends */
+
+/* live tv */
+
+.live-tv {
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    margin: 1em 3%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    text-align: center;
+}
+
+.live-tv .live-tv-header h1 {
+    font-size: 2rem;
+}
+
+.live-tv .live-tv-header p {
+    font-size: 1.4rem;
+}
+
+/* sports section */
+
+.sports {
+    background: url("../img/live-sports-small.jpg") no-repeat center center / cover;
+    padding: 2em;
+}
+
+.sports .sports-content {
+    width: 100%;
+    text-align: center;
+}
+
+.sports .sports-content h2 {
+    font-size: 2rem;
+}
+
+.sports .sports-content .platforms ul {
+    display: flex;
+    gap: 1em;
+}
+
+.sports .sports-content .platforms ul li {
+    width: 70px;
+    height: 70px;
+}
+
+/* footer */
+
+.footer {
+    background: rgb(218, 218, 218);
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-direction: column;
+}
+
+.footer-header {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.footer .footer-header ul li a {
+    color: rgb(53, 53, 53);
+}
+
+.footer .footer-footer {
+    display: flex;
+    gap: 1em;
+}
+
+.footer .footer-footer i {
+    color: rgb(53, 53, 53);
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.footer .footer-footer i:hover {
+    color: rgb(92, 92, 92);
+    transform: scale(1.1);
+}
+
+.copyrights {
+    background: rgb(37, 37, 37);
+    padding: 1em;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Media Queries */
+
+@media(min-width: 500px) {
+    .footer-header {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 700px) {
+    header {
+        height: 80vh;
+    }
+    header .header-content h1 {
+        font-size: 2.5rem;
+    }
+    header .header-content .trial-btn {
+        font-size: 2rem;
+    }
+    .modal {
+        max-width: 600px;
+    }
+    .subs {
+        padding: 2em 2vw;
+    }
+    .subs ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .cards ul {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5em;
+    }
+    .footer-header {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(min-width: 900px) {
+    .sports {
+        background: url("../img/live-sports.jpg") no-repeat center center / cover;
+    }
+    .sports .sports-content {
+        width: 60%;
+    }
+    .footer-header {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media(min-width: 1250px) {
+    .cards ul {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5em;
+    }
+    .footer-header {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}

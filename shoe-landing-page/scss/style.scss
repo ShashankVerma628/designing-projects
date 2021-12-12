@@ -1,0 +1,116 @@
+@import "../scss/reset";
+@import "../scss/config";
+@import "../scss/utility";
+@import "../scss/media";
+
+.hero-banner {
+    width: 100vw;
+    height: 90vh;
+    color: #fff;
+    @supports (background-blend-mode: lighten) {
+        background: url("../img/shoe-3.png") no-repeat top center, radial-gradient(#444, #333);
+        background-attachment: fixed;
+    }
+
+    .banner-heading{
+        color: rgb(0, 0, 0);
+    }
+   
+
+    .container {
+        h1 {
+            font-size: clamp(3rem, calc(5vw+1rem), 4rem);
+        }
+        p {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.featured {
+    background: rgb(228, 227, 227);
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+        flex-wrap: wrap;
+
+        & > * {
+            flex-basis: 30%;
+            min-width: 15em;
+
+            & h2{
+                opacity: 0;
+                transition: all 0.2s ease-in-out;
+            }
+        }
+    }
+    &-item{
+        display: block;
+        position: relative;
+        transform: scale(0.85);
+        transition: all 0.2s ease-in-out;
+        text-align: center;
+
+        &:hover,
+        &:focus{
+            transform: scale(1);
+
+            & h2{
+                opacity: 1;
+            }
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            width: 75%;
+            height: 75%;
+            border-radius: 50%;
+            z-index: -1;
+            background: #2193b0;
+        }
+    }
+}
+
+
+// Products
+
+.products{
+    
+    &-list{
+
+        .product{
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: center;
+            // align-items: center;
+            // gap: 0.5em;
+            text-align: center;
+            border-radius: 20px;
+
+            h3{
+                font-size: 2em;
+                color: #fff;
+            }
+            img{
+                // display: block;
+                margin: -7em 0 0 0;
+                max-width: 450px;
+            }
+        }
+        .shoe-red{
+            background: radial-gradient(#faa700,#e48d00);
+        }
+
+        .shoe-blue{
+            background: radial-gradient(#6dd5ed,#2193b0);
+        }
+        
+        .shoe-white{
+            background: radial-gradient(#faa700,#eac886);
+        }
+    }
+}

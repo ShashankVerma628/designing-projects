@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- to make 100% sure no layout shift happen -->
+    <link rel="preload" href="https://fonts.googleapis.com">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Acme</title>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header">
+        <h1><span class="brand">Acme</span> Web Design</h1>
+        <nav>
+            <ul class="navbar">
+                <li class="link"><a href="home.html">Home</a></li>
+                <li class="link"><a href="about.html">About</a></li>
+                <li class="link"><a class="current" href="services.html">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- header ends -->
+    <!-- newsletter -->
+    <section class="newsletter">
+        <h2 class="headline">Subscribe To Our Newsletter</h2>
+        <div class="form">
+            <form action="#">
+                <input type="email" name="email" placeholder="Enter Email" />
+                <input type="submit" value="Submit" class="btn" />
+            </form>
+        </div>
+    </section>
+    <!-- newsletter ends -->
+    <div class="page-heading">
+        <h2>Services</h2>
+    </div>
+    <!-- main - services -->
+    <main>
+        <section>
+            <ul class="services">
+                <li class="pricing-content">
+                    <h2>Website Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, reprehenderit? Sequi, modi magni! Incidunt hic temporibus nemo eveniet minima in veritatis assumenda. Voluptas, cum!</p>
+                    <p class="prices">Pricing: $100- $300</p>
+                </li>
+                <li class="pricing-content">
+                    <h2>Website Maintenance</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, reprehenderit? Sequi, modi magni! Incidunt hic temporibus nemo eveniet minima in veritatis assumenda. Voluptas, cum!</p>
+                    <p class="prices">Pricing: $2500 Per Month</p>
+                </li>
+                <li class="pricing-content">
+                    <h2>Website Hosting</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, reprehenderit? Sequi, modi magni! Incidunt hic temporibus nemo eveniet minima in veritatis assumenda. Voluptas, cum!</p>
+                    <p class="prices">Pricing: $25 Per Month</p>
+                </li>
+            </ul>
+        </section>
+        <aside>
+            <h3>Get A Quote</h3>
+            <form action="#" class="quote-form">
+                <label for="name">Name</label><br />
+                <input type="text" placeholder="Enter Name" /><br />
+                <label for="email">Email</label><br />
+                <input type="email" placeholder="Enter Email" /><br />
+                <label for="message">Message</label><br />
+                <textarea placeholder="Enter Your Message.... "></textarea><br />
+                <input type="submit" value="Submit" class="btn"/>
+            </form>
+        </aside>
+    </main>
+    <!-- main ends -->
+
+    <!-- footer -->
+
+    <footer class="footer">
+        <p>Acme Web Design &copy; Copyrights | All Rights Reserved</p>
+    </footer>
+</body>
+
+</html>

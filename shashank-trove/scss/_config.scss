@@ -1,0 +1,32 @@
+// Color schemes
+
+$primary: #ffb705;
+$primary-light: #ffdd8b;
+$primary-dark: #845f05;
+$secondary: #219ebc;
+$secondary-light: #8dcddd;
+$secondary-dark: #176c80;
+$accent: #ee6055;
+$black: #000000;
+$neutral-dark: #1f1f21;
+$neutral: #6e6e75;
+$neutral-light: #bdbdc9;
+$neutral-lighter: #e5e5e9;
+$white: #ffffff;
+$unnamed-color-00ccff: #00ccff;
+
+// Fonts
+
+// // Roboto
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200;@300;@400;500&display=swap");
+// mouse-memoirs
+@import url("https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap");
+
+// flexbox
+
+@mixin flexbox($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}

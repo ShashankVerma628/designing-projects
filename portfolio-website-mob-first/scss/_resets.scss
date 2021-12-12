@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: "Russo One", sans-serif;
+    line-height: 1.6;
+    letter-spacing: 0.1em;
+    @include transitions;
+}

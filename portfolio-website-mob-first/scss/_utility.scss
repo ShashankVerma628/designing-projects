@@ -1,0 +1,45 @@
+
+
+.btn{
+    @include set-background($buttonColor);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.bottom{
+    border-bottom: 2px solid #000;
+}
+
+.container{
+    @include flexbox(column);
+    max-width: 1500px;
+    margin: auto;
+}
+
+.link{
+    color: blue;
+}
+
+// margin & padding
+
+$spaceamounts : (1,2,3,4,5);
+
+@each $space in $spaceamounts{
+    // margins
+    .my-#{$space}{
+        margin: #{$space}em 0;
+    }
+    .m-#{$space}{
+        margin: #{$space}em;
+    }
+
+    // paddings
+    
+    .py-#{$space}{
+        padding: #{$space}em 0;
+    }
+    .p-#{$space}{
+        padding: #{$space}em;
+    }
+
+}

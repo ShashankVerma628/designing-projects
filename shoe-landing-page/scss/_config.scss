@@ -1,0 +1,56 @@
+// shoe red
+$blue-inner: #6dd5ed;
+$green-outer: #2193b0;
+$green-accent: #008951;
+
+// show white
+$orange-inner: #fce4b3;
+$orange-outer: #eac886;
+$blue-accent: #2f4858;
+
+// show blue
+$yellow-inner: #faa700;
+$yellow-outer: #e48d00;
+$red-accent: #a1173c;
+
+
+// set color on the basis of background
+
+@function set-text-color($color) {
+    @if (lightness($color) > 60) {
+        @return #333;
+    } @else {
+        @return #fff;
+    }
+}
+
+// set background
+
+@mixin set-background($color) {
+    background: $color;
+    color: set-text-color($color);
+}
+
+
+
+// margin & paddings
+
+
+$spaceamounts : (1,2,3,4,5);
+
+@each $space in $spaceamounts{
+    // margin
+    .my-#{$space}{
+        margin: #{$space}em 0;
+    }
+    .m-#{$space}{
+        margin: #{$space}em;
+    }
+    // padding
+    .p-#{$space}{
+        padding: #{$space}em;
+    }
+    .py-#{$space}{
+        padding: #{$space}em 0;
+    }
+}

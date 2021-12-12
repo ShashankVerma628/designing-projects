@@ -1,0 +1,50 @@
+
+
+
+// margin & paddings
+$spaceamounts: (1,2,3,4,5);
+
+@each $space in $spaceamounts{
+    .my-#{$space}{
+        margin: #{$space}em 0;
+    }
+
+    .m-#{$space}{
+        margin: #{$space}em;
+    }
+
+    .p-#{$space}{
+        padding: #{$space}em;
+    }
+
+    .py-#{$space}{
+        padding: #{$space}em 0;
+    }
+}
+
+
+// container
+
+.container{
+    @media(min-width: 700px){
+        max-width: 70%;
+        margin : 0 auto;
+    }
+}
+
+
+// buttons
+
+.btn{
+    display: inline-block;
+    @include set-background(#000);
+    border-radius: 12px;
+    padding: 0.5em 1em;
+}
+
+
+// text
+
+.txt-lg{
+    font-size: 2rem;
+}

@@ -1,0 +1,54 @@
+// google fonts
+
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+$mainColor: #606b56;
+$secondaryColor: #515a48;
+$borderColor: #161914;
+$mainText: #fff;
+$secondaryText: #eeeeee;
+$themeDotBorder: #fff;
+$previewBg: #48515a;
+$previewShadow: #2a2f25;
+$buttonColor: #669966;
+
+// :export {
+//     $mainColor: #606b56;
+//     $secondaryColor: #515a48;
+//     $borderColor: #161914;
+//     $mainText: #fff;
+//     $secondaryText: #eeeeee;
+//     $themeDotBorder: #fff;
+//     $previewBg: #48515a;
+//     $previewShadow: #2a2f25;
+//     $buttonColor: #669966;
+// }
+
+@mixin flexbox($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+@mixin transitions {
+    transition: all 0.3s ease-in-out;
+}
+
+// set text color based on background
+
+@function set-text-color($color) {
+    @if (lightness($color) > 60) {
+        @return #000;
+    } @else {
+        @return #fff;
+    }
+}
+
+// set background & Text color
+
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}
